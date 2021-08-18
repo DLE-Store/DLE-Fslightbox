@@ -16,8 +16,9 @@
 ## Установка
 1. Загрузить через систему плагинов файл dle-fslightbox.xml
 2. Скачать https://fslightbox.com/javascript/download
-3. Переместить в {THEME}/js
-4. В нужном месте вставить в шаблон <script src="{THEME}/js/fslightbox.js" async></script>
+3. Переместить в `{THEME}/js`
+4. В нужном месте вставить в шаблон `<script src="{THEME}/js/fslightbox.js" async></script>`
 
 by [zettend](https://zettend.ru/)
+
 Спасибо за помощь [Роману](https://t.me/dromich) из Телеграм канала [DLE Group](https://t.me/dle_group)
