@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dleplugin>
+	<name>DLE Fslightbox</name>
+	<description>Меняем Highslide JS на более приятный и прогрессивный fslightbox.js</description>
+	<icon></icon>
+	<version>0.0.1</version>
+	<dleversion>14</dleversion>
+	<versioncompare>greater</versioncompare>
+	<upgradeurl>https://gitcdn.link/repo/DLE-Store/DLE-Fslightbox/main/update.json</upgradeurl>
+	<filedelete>0</filedelete>
+	<needplugin></needplugin>
+	<mnotice>0</mnotice>
+	<mysqlinstall><![CDATA[]]></mysqlinstall>
+	<mysqlupgrade><![CDATA[]]></mysqlupgrade>
+	<mysqlenable><![CDATA[]]></mysqlenable>
+	<mysqldisable><![CDATA[]]></mysqldisable>
+	<mysqldelete><![CDATA[]]></mysqldelete>
+	<phpinstall><![CDATA[]]></phpinstall>
+	<phpupgrade><![CDATA[]]></phpupgrade>
+	<phpenable><![CDATA[]]></phpenable>
+	<phpdisable><![CDATA[]]></phpdisable>
+	<phpdelete><![CDATA[]]></phpdelete>
+	<notice><![CDATA[1. Скачать https://fslightbox.com/javascript/download
+2. Переместить в {THEME}/js
+3. В нужном месте вставить в шаблон <script src="{THEME}/js/fslightbox.js" async></script>
+
+by zettend(https://zettend.ru/)
+Спасибо за помощь Роману из Телеграм канала https://t.me/dle_group]]></notice>
+	<file name="engine/classes/parse.class.php">
+		<operation action="replace">
+			<searchcode><![CDATA[class=\"highslide\"]]></searchcode>
+			<replacecode><![CDATA[data-fslightbox]]></replacecode>
+		</operation>
+		<operation action="replace">
+			<searchcode><![CDATA['download' => 'Bool',]]></searchcode>
+			<replacecode><![CDATA['download' => 'Bool', 'data-fslightbox' => 'Bool',]]></replacecode>
+		</operation>
+	</file>
+	<file name="engine/inc/xfields.php">
+		<operation action="replace">
+			<searchcode><![CDATA[class=\"highslide\"]]></searchcode>
+			<replacecode><![CDATA[data-fslightbox]]></replacecode>
+		</operation>
+	</file>
+	<file name="engine/modules/main.php">
+		<operation action="replace">
+			<searchcode><![CDATA[class=\"highslide\"]]></searchcode>
+			<replacecode><![CDATA[data-fslightbox]]></replacecode>
+		</operation>
+	</file>
+	<file name="engine/modules/show.custom.php">
+		<operation action="replace">
+			<searchcode><![CDATA[class=\"highslide\"]]></searchcode>
+			<replacecode><![CDATA[data-fslightbox]]></replacecode>
+		</operation>
+	</file>
+	<file name="engine/modules/show.full.php">
+		<operation action="replace">
+			<searchcode><![CDATA[class=\"highslide\"]]></searchcode>
+			<replacecode><![CDATA[data-fslightbox]]></replacecode>
+		</operation>
+	</file>
+	<file name="engine/modules/show.short.php">
+		<operation action="replace">
+			<searchcode><![CDATA[class=\"highslide\"]]></searchcode>
+			<replacecode><![CDATA[data-fslightbox]]></replacecode>
+		</operation>
+	</file>
+	<file name="engine/modules/topnews.php">
+		<operation action="replace">
+			<searchcode><![CDATA[class=\"highslide\"]]></searchcode>
+			<replacecode><![CDATA[data-fslightbox]]></replacecode>
+		</operation>
+	</file>
+</dleplugin>
